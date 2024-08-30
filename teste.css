@@ -1,0 +1,155 @@
+.celular {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 375px;
+    height: 667px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(58, 4, 159, 0.1);
+    overflow: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.fotoPerfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.fotoPerfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nome {
+    margin-left: 10px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto;
+    height: 70%;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.message.received {
+    justify-content: flex-start;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message .text {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message.received .text {
+    margin-right: auto;
+}
+
+.message.sent .text {
+    background-color: #333;
+    color: #fff;
+    margin-left: auto;
+}
+
+.message .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.microphone,
+.clip {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-box {
+    width: 70%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 10px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #730fb6;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #430774;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #7818e5;
+}
+
+li{
+    list-style-type: none;
+    text-align: left;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+   
+}

@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* cabeçalho cmc */
+header {
+    background-color: #00426B;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* cabeçalho fim */
+
+/* rodapé cmc */
+footer{
+    background-color: #00426B;
+    color: White;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    min-height: 15vh;
+    margin-top: auto;
+    font-size: 14px;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+footer img {
+    max-width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+/* rodapé fim */
+
+/* botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* bolinhas fotos */
+.prods {
+    display: inline-block;
+    margin: 18px;
+    text-align: center;
+    
+
+}
+
+.prods img {
+    width: 100%;
+    height: auto;
+    max-width: 310px;
+    max-height: 310px;
+    border-radius: 50%; /* Faz a imagem ficar em formato de bolinha */
+}
+
+/* carrossel */
+.carousel-item img {
+    border-radius: 10px;
+    border: none;
+}
+
+/* frase ola home */
+.h1_home {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+.h2_home {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+/* frase de boas-vindas fim */
+
+/* Formulário */
+.custom-input {
+    background-color: #B6C4CC;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    color: #4A4A4A;
+    font-family: Arial, sans-serif;
+    width: 300px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão personalizado */
+.custom-button {
+    background-color: #3C5A77;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 40px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .h1_home {
+        font-size: 35px;
+    }
+
+    .h2_home {
+        font-size: 25px;
+    }
+
+    .custom-button {
+        width: 100%; /* Botão responsivo */
+        max-width: 200px;
+    }
+
+    .prods {
+        margin: 10px;
+    }
+
+    .prods img {
+        max-width: 200px; /* Ajusta o tamanho da imagem em dispositivos menores */
+        max-height: 200px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* foto profs */
+.prods2 {
+    display: inline-block;
+    margin: 18px;
+    text-align: center;
+    
+
+}
+/* foto profs */
+
+/* input pesquisa */
+
+
+
+/* input pesquisa */
+
+/* filtrar */
+.select-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-select {
+    width: 120px; /* Ajuste a largura conforme necessário */
+    padding: 5px; /* Ajuste o preenchimento interno */
+    font-size: 14px; /* Ajuste o tamanho da fonte */
+    border: 1px solid #ddd; /* Borda do select */
+    border-radius: 4px; /* Borda arredondada */
+    background-color: #fff; /* Cor de fundo */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+}
+
+.form-select:focus {
+    border-color: #007bff; /* Cor da borda ao focar */
+    outline: none; /* Remove a borda de foco padrão */
+}
+/* filtrar */

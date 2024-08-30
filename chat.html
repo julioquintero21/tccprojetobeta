@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate papo Node.JS e socket.io</title>
+
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="celular">
+        <div class="cabecalho">
+          <div class="fotoPerfil">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRnVWjbQ06dyuttlWwUaeT_6P06ItDP6L2nA&usqp=CAU" alt="">
+          </div>
+          <div class="nome">
+            <h3>Açai</h3>
+          </div>
+          <div class="icones">
+            <a href="" style="color: antiquewhite;"><ion-icon name="camera-outline"></ion-icon></a>
+           <a href="" style="color: aliceblue;"><ion-icon name="search-outline"></ion-icon></a>
+          </div>
+        </div>
+        <br><br>
+        <div>
+            <ul id="mensagens"></ul>
+        </div>
+        <br>
+        <div class="n">
+            <form id="chat-form">
+                <input type="text" id="nome" placeholder="Seu nome de usuário"><br><br>
+                <input type="text" id="mensagem" placeholder="Sua mensagem"><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        //Criar uma instancia do socket.io
+        const socket = io();
+        //Seleciona o valor do input nome de usuário
+        const nomeInput = document.getElementById('nome');
+        //Seleciona o valor do input da mensagem
+        const mensagemInput = document.getElementById('mensagem');
+        //Seleciona a lista de mensagens
+        const mensagens = document.getElementById('mensagens');
+
+        //Evento de envio do formulário
+        document.getElementById('chat-form').addEventListener('submit', event => {
+            //Padrão de envios
+            event.preventDefault();
+
+            const nome = nomeInput.value;
+            const mensagem = mensagemInput.value;
+
+            //Verificar se os valores estão branco
+            nome.trim() && mensagem.trim() && socket.emit('chat message', { nome, mensagem, tipo: 'enviado' });
+            //Limpar o input da mensagem
+            mensagemInput.value = '';
+            //Desabilita o input do usuário
+            nomeInput.disabled = true;
+        });
+
+        socket.on('chat message', dados => {
+            //Criar um elemento de lista para exibir a mensagem
+            const lista = document.createElement('li');
+            
+            // Adicionar classe com base na origem da mensagem
+            lista.classList.add(dados.tipo === 'enviado' ? 'sent' : 'received');
+            
+            //Define o texto da mensagem
+            lista.textContent = `${dados.nome}: ${dados.mensagem}`;
+            
+            //Adicionar o elemento de lista de mensagem
+            mensagens.appendChild(lista);
+        });
+    </script>
+</body>
+</html>
